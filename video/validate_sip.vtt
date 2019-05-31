@@ -1,0 +1,17 @@
+WEBVTT Kind: captions; Language: en
+
+00:00.000 --> 00:03.000
+<v ES> The validation steps of Information Packages in ESSArch are defined in the Submission Agreement and it´s associated profiles.
+
+00:03.500 --> 00:06.000
+<v ES> They can be made mandatory or optional for the producer organization.
+
+
+00:06.500--> 00:11.000
+<v ES> By clicking the IP row, the user can see information about validation tasks executed by ESSArch and their outcome.
+
+00:14.000 --> 00:18.000
+<v ES> ESSArch offers verbose audit possibilties through out all steps of the SIP-creation
+
+00:36.000 --> 00:43.000
+<v ES> The user can view all the provenance events (PREMIS) under the Event tab

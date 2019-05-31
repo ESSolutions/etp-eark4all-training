@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>ESSArch Pre-Ingest Training</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="vendor/video-js/css/video-js.css" rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/freelancer.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+
+    <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">Pre-Ingest</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#pre-agreement">Agreement Processing</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#data-extraction"></i>Data Extraction</a>
+      </li>
+	     <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#prepare-ip">Prepare IP</a>
+      </li>
+	  <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#create-sip">Create SIP</a>
+      </li>
+	  <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#sip-validation">(S)IP Validation</a>
+      </li>
+	    <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#submit-sip">Submit SIP</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container">
+	<h1 class="mb-0">ESSArch</h1>
+	<br>
+      <h2 class="font-weight-light mb-0">Pre-Ingest - Training</h2>
+    </div>
+	<br>
+	<br>
+	<br>
+  <!-- created with bpmn-js / http://bpmn.io -->
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1062" height="198" viewBox="246 259 1062 198" version="1.1">
+  	<defs>
+  		<marker id="sequenceflow-end-white-black-8o7j5zqrnax94dh5si79jfht5" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto">
+  			<path d="M 1 5 L 11 10 L 1 15 Z" style="fill: black; stroke-width: 1px; stroke-linecap: round; stroke-dasharray: 10000, 1; stroke: black;"/>
+  		</marker>
+  	</defs>
+  	<g class="djs-group">
+  		<g class="djs-element djs-connection" data-element-id="SequenceFlow_04g3h9i" style="display: block;">
+  			<g class="djs-visual">
+  				<path d="m  282,333L340,333 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-8o7j5zqrnax94dh5si79jfht5');"/>
+  			</g>
+  			<polyline points="282,333 340,333 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="276" y="327" width="70" height="12" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-connection" data-element-id="SequenceFlow_063l599" style="display: block;">
+  			<g class="djs-visual">
+  				<path d="m  596,333L647,333 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-8o7j5zqrnax94dh5si79jfht5');"/>
+  			</g>
+  			<polyline points="596,333 647,333 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="590" y="327" width="63" height="12" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-connection" data-element-id="SequenceFlow_1ubts9a" style="display: block;">
+  			<g class="djs-visual">
+  				<path d="m  1187,333L1249,333 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-8o7j5zqrnax94dh5si79jfht5');"/>
+  			</g>
+  			<polyline points="1187,333 1249,333 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="1181" y="327" width="74" height="12" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-connection" data-element-id="SequenceFlow_1g4z10f" style="display: block;">
+  			<g class="djs-visual">
+  				<path d="m  747,333L787,333 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-8o7j5zqrnax94dh5si79jfht5');"/>
+  			</g>
+  			<polyline points="747,333 787,333 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="741" y="327" width="52" height="12" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-connection" data-element-id="SequenceFlow_1kdkcds" style="display: block;">
+  			<g class="djs-visual">
+  				<path d="m  440,333L496,333 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-8o7j5zqrnax94dh5si79jfht5');"/>
+  			</g>
+  			<polyline points="440,333 496,333 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="434" y="327" width="68" height="12" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-connection" data-element-id="SequenceFlow_1u6k667" style="display: block;">
+  			<g class="djs-visual">
+  				<path d="m  1036,333L1087,333 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-8o7j5zqrnax94dh5si79jfht5');"/>
+  			</g>
+  			<polyline points="1036,333 1087,333 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="1030" y="327" width="63" height="12" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-connection" data-element-id="SequenceFlow_1dei6kh" style="display: block;">
+  			<g class="djs-visual">
+  				<path d="m  1137,373L1137,415 L1249,415 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-8o7j5zqrnax94dh5si79jfht5');"/>
+  			</g>
+  			<polyline points="1137,373 1137,415 1249,415 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="1131" y="367" width="124" height="54" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-connection" data-element-id="SequenceFlow_00o28fj" style="display: block;">
+  			<g class="djs-visual">
+  				<path d="m  968,293L968,265 L714,265 L714,293 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-8o7j5zqrnax94dh5si79jfht5');"/>
+  			</g>
+  			<polyline points="968,293 968,265 714,265 714,293 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="708" y="259" width="266" height="40" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-connection" data-element-id="SequenceFlow_1earcs9" style="display: block;">
+  			<g class="djs-visual">
+  				<path d="m  887,333L936,333 " style="fill: none; stroke-width: 2px; stroke: black; stroke-linejoin: round; marker-end: url('#sequenceflow-end-white-black-8o7j5zqrnax94dh5si79jfht5');"/>
+  			</g>
+  			<polyline points="887,333 936,333 " class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="881" y="327" width="61" height="12" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="EndEvent_14r1nqe" style="display: block;" transform="translate(1249 397)">
+  			<g class="djs-visual">
+  				<circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 4px; fill: white; fill-opacity: 0.95;"/>
+  				<path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: black; stroke-width: 1px; stroke: white;"/>
+  			</g>
+  			<rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="EndEvent_0ayijv2" style="display: block;" transform="translate(1249 315)">
+  			<g class="djs-visual">
+  				<circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 4px; fill: white; fill-opacity: 0.95;"/>
+  				<path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: black; stroke-width: 1px; stroke: white;"/>
+  			</g>
+  			<rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="StartEvent_1p55ixn" style="display: block;" transform="translate(252 318)">
+  			<g class="djs-visual">
+  				<circle cx="15" cy="15" r="15" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+  			</g>
+  			<rect x="0" y="0" width="30" height="30" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="42" height="42" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+    <a class="js-scroll-trigger" href="#data-extraction">
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="SubProcess_0sh49nd" style="display: block;" transform="translate(496 293)">
+  			<g class="djs-visual">
+  				<rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+  				<text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;">
+  					<tspan x="37.328125" y="36.4">Data</tspan>
+  					<tspan x="23.328125" y="50.8">Extraction</tspan>
+  				</text>
+  				<rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/>
+  				<path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/>
+  			</g>
+  			<rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  </a>
+  <a class="js-scroll-trigger" href="#submit-sip">
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="SubProcess_1p1r6qk" style="display: block;" transform="translate(1087 293)">
+  			<g class="djs-visual">
+  				<rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+  				<text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;">
+  					<tspan x="19.9921875" y="43.599999999999994">Submit SIP </tspan>
+  				</text>
+  				<rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/>
+  				<path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/>
+  			</g>
+  			<rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  </a>
+    <a class="js-scroll-trigger" href="#sip-validation">
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="SubProcess_0fzqkgb" style="display: block;" transform="translate(936 293)">
+  			<g class="djs-visual">
+  				<rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+  				<text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;">
+  					<tspan x="8.765625" y="43.599999999999994">(S)IP Validation</tspan>
+  				</text>
+  				<rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/>
+  				<path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/>
+  			</g>
+  			<rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  </a>
+
+  	<g class="djs-group">
+      <a class="js-scroll-trigger" href="#prepare-ip">
+  		<g class="djs-element djs-shape" data-element-id="SubProcess_0rh31xz" style="display: block;" transform="translate(647 293)">
+  			<g class="djs-visual">
+  				<rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+  				<text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;">
+  					<tspan x="21.3203125" y="43.599999999999994">Prepare IP</tspan>
+  				</text>
+  				<rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/>
+  				<path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/>
+  			</g>
+  			<rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/>
+  		</g>
+        </a>
+  	</g>
+      <a class="js-scroll-trigger" href="#create-sip">
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="SubProcess_1f4p2bc" style="display: block;" transform="translate(787 293)">
+  			<g class="djs-visual">
+  				<rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+  				<text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;">
+  					<tspan x="20.65625" y="43.599999999999994">Create SIP</tspan>
+  				</text>
+  				<rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/>
+  				<path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/>
+  			</g>
+  			<rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  </a>
+    <a class="js-scroll-trigger" href="#pre-agreement">
+  	<g class="djs-group">
+
+  		<g class="djs-element djs-shape" data-element-id="SubProcess_1tox4c3" style="display: block;" transform="translate(340 293)">
+  			<g class="djs-visual">
+  				<rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke: black; stroke-width: 2px; fill: white; fill-opacity: 0.95;"/>
+  				<text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: black;">
+  					<tspan x="8.984375" y="36.4">Pre-Agreement</tspan>
+  					<tspan x="20.15625" y="50.8">Processing</tspan>
+  				</text>
+  				<rect x="0" y="0" width="14" height="14" rx="0" ry="0" style="stroke: black; stroke-width: 1px; fill: white;" transform="translate(42.5 60)"/>
+  				<path d="m42.5,60 m 7,2 l 0,10 m -5,-5 l 10,0" data-marker="sub-process" style="fill: white; stroke-width: 2px; stroke: black;"/>
+  			</g>
+  			<rect x="0" y="0" width="100" height="80" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="112" height="92" class="djs-outline" style="fill: none;"/>
+  		</g>
+
+  	</g>
+    </a>
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="BoundaryEvent_1rankai" style="display: block;" transform="translate(1169 275)">
+  			<g class="djs-visual">
+  				<circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 1px; fill: white; fill-opacity: 1;"/>
+  				<circle cx="18" cy="18" r="15" style="stroke: black; stroke-width: 1px; fill: none;"/>
+  				<path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: white; stroke-width: 1px; stroke: black;"/>
+  			</g>
+  			<rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="BoundaryEvent_0atbusu" style="display: block;" transform="translate(1018 275)">
+  			<g class="djs-visual">
+  				<circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 1px; fill: white; fill-opacity: 1;"/>
+  				<circle cx="18" cy="18" r="15" style="stroke: black; stroke-width: 1px; fill: none;"/>
+  				<path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: white; stroke-width: 1px; stroke: black;"/>
+  			</g>
+  			<rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="BoundaryEvent_1f03yy9" style="display: block;" transform="translate(729 275)">
+  			<g class="djs-visual">
+  				<circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 1px; fill: white; fill-opacity: 1;"/>
+  				<circle cx="18" cy="18" r="15" style="stroke: black; stroke-width: 1px; fill: none;"/>
+  				<path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: white; stroke-width: 1px; stroke: black;"/>
+  			</g>
+  			<rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="BoundaryEvent_0j45amb" style="display: block;" transform="translate(869 275)">
+  			<g class="djs-visual">
+  				<circle cx="18" cy="18" r="18" style="stroke: black; stroke-width: 1px; fill: white; fill-opacity: 1;"/>
+  				<circle cx="18" cy="18" r="15" style="stroke: black; stroke-width: 1px; fill: none;"/>
+  				<path d="m 8.459999999999999,11.34 l 0,12.6 l 18.900000000000002,0 l 0,-12.6 z l 9.450000000000001,5.4 l 9.450000000000001,-5.4" style="fill: white; stroke-width: 1px; stroke: black;"/>
+  			</g>
+  			<rect x="0" y="0" width="36" height="36" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="48" height="48" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="EndEvent_14r1nqe_label" style="display: block;" transform="translate(1235 437)">
+  			<g class="djs-visual">
+  				<text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: black;">
+  					<tspan x="0" y="9.899999999999999">SIP removed</tspan>
+  				</text>
+  			</g>
+  			<rect x="0" y="0" width="64" height="14" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="76" height="26" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-group">
+  		<g class="djs-element djs-shape" data-element-id="EndEvent_0ayijv2_label" style="display: block;" transform="translate(1233 355)">
+  			<g class="djs-visual">
+  				<text lineHeight="1.2" class="djs-label" style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: black;">
+  					<tspan x="0" y="9.899999999999999">SIP submitted</tspan>
+  				</text>
+  			</g>
+  			<rect x="0" y="0" width="69" height="14" class="djs-hit" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"/>
+  			<rect x="-6" y="-6" width="81" height="26" class="djs-outline" style="fill: none;"/>
+  		</g>
+  	</g>
+  	<g class="djs-drag-group" style="pointer-events: none;" transform="translate(684 237)"/>
+  	<g class="djs-drag-group" style="pointer-events: none;" transform="translate(137 0)"/>
+  	<g class="djs-drag-group" style="pointer-events: none;" transform="translate(115 0)"/>
+  </svg>
+
+
+</header>
+
+  <!--Agreement Grid Section -->
+  <section class="portfolio" id="pre-agreement">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Agreement Processing</h2>
+      <hr class="pre-agreement-icon mb-5">
+
+      <div class="row">
+ <div class="col-md-6 col-lg-12">
+ <p class="mb-5" style="font-size: 1.5em;"> The first mandatory responsibility as stated in the OAIS reference model is to <em>negotiate</em> for and accept appropriate information from information Producers.
+ This is done by the means of a <strong>Submission Agreement:</strong> The agreement reached between an OAIS(Archive) and the Producer that
+specifies a data model, and <em>any other arrangements needed</em>, for the Data Submission Session.
+This data model identifies format/contents and the logical constructs used by the Producer
+and how they are represented on each media delivery or in a telecommunication session.
+ </p>
+
+ <center><img class="img-fluid mb-5" src="img/bpmn/pre_agreement.svg" alt=""></center>
+ <p style="font-size: 1.5em;">Though the OAIS reference model acknowledge the need of a submission agreement to be drawn up between the producer and the archive the model does not describe this in detail.</p>
+ <p style="font-size: 1.5em;">There is however a seperate methodology to help define and provide structure to the
+ relationships and interactions between an information Producer and an Archive. <em> The Producer Archive Interface Methodology Abstract Standard</em> (PAIMAS)
+ that defines the methodology for the structure of actions that are required from
+ the initial time of contact between the Producer and the Archive until the objects of
+ information are received and validated by the Archive</p>
+<br>
+ <p style="font-size: 1.5em;">The "output" from working with the PAIMAS methodology are agreements for preservation principles,
+ technical tolerances, package structures, processes and regulations. It also identifies, defines and quantifies organisational needs as well as how everything should be financed.
+
+<center>
+  <br>
+ <p><a target="blank" href="https://public.ccsds.org/Pubs/651x0m1.pdf">Producer-Archive Interface Methodology Abstract Standard <strong>(PAIMAS) CCSDS 651.0-M </strong> <em>(English)</em></a></p>
+ <p><a target="blank" href="https://public.ccsds.org/Pubs/651x0m1.pdf">Producer-Archive Interface Specification <strong>(PAIS) CCSDS 651.1-B-1</strong> <em>(English)</em></a></p>
+ <p><a target="blank" href="https://riksarkivet.se/Media/pdf-filer/Projekt/Leveranshandledning.pdf">Leveranshandledning (project eARD)<em>(Swedish)</em></a></p>
+</center>
+ </div>
+
+
+  </section>
+
+<!-- Data Extraction Grid Section -->
+  <section class="portfolio" id="data-extraction">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Data Extraction</h2>
+      <hr class="extract-icon mb-5">
+
+      <div class="row">
+	   <div class="col-md-6 col-lg-12">
+
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+
+              </div>
+            </div>
+
+
+<center class="fill"><img src="img/bpmn/data_extraction.svg"></center>
+
+			</div>
+			<div class="col-md-6 col-lg-12">
+			 <p class="mb-5" style="font-size: 1.5em;"> The actual data extraction of data/records/files as required by the Data Selection Profile defined in the agreement processesing. Depending on the prerequisites of the source-system this process can be a cumbersome and often involve unforeseen costs especially when dealing with data extraction from legacy it-systems. </p>
+       <p class="mb-5" style="font-size: 1.5em;">The EARK-projects has delivered tools for two common digital preservation targets namely electronic Record Management Systems(ERMS) and relational databases.</p>
+			 </div>
+
+
+
+
+        <div class="col-md-6 col-lg-12">
+
+          <div class="row">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Tool</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Developer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href ="https://github.com/eark-project/erms-export-ui-module">ERMS Export Module<a/></td>
+                  <td>The ERMS Export Module is a tool which allows for the controlled and selective export of records and their metadata from any CMIS 1.0 compliant records or content management system.</td>
+                  <td><a href="https://www.magenta.dk">Magenta</td>
+                </tr>
+                <tr>
+                  <td><a href="http://www.database-preservation.com/">Database Preservation Toolkit</a></td>
+                  <td>The Database Preservation Toolkit allows conversion between Database formats, including connection to live systems, for purposes of digitally preserving databases. The toolkit allows conversion of live or backed-up databases into preservation formats such as SIARD  </td>
+                  <td><a href="https://www.keep.pt/">KEEPS</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+         </div>
+        </div>
+
+
+  </section>
+
+
+
+  <!-- Prepare IP Grid Section -->
+  <section class="portfolio" id="prepare-ip">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Prepare IP</h2>
+      <hr class="open-box-icon mb-5">
+
+      <div class="row">
+	   <div class="col-md-12 col-lg-12">
+
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+
+              </div>
+            </div>
+        <!-- created with bpmn-js / http://bpmn.io -->
+				<center><img class="fill" src="img/bpmn/prepare_ip.svg"></center>
+			</div>
+			<div class="col-md-6 col-lg-12">
+			 <p class="mb-5" style="font-size: 1.5em;"> The first step in the process of SIP creation is the Preparation of an Information Package.  Whitin ESSArch, the system prepares the IP:s on a logical and physical level. The producer prepares the Package Description and selects the appropriate predefined profiles.</p>
+       <center>
+              <div class="text-center mt-4">
+                <a class="btn btn-primary btn-xl btn-outline-light mx-auto screencast" href="#prepare-ip-modal-1">
+                  <i class="fas fa-video mr-2"></i>
+                  DEMO!
+                </a>
+              </div>
+            </center>
+			 </div
+
+
+
+  </section>
+
+    </section>
+  <!-- Create SIP Grid Section -->
+  <section class="portfolio" id="create-sip">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Create SIP</h2>
+      <hr class="archive-icon mb-5">
+
+      <div class="row">
+	   <div class="col-md-12 col-lg-12">
+
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+
+              </div>
+            </div>
+        <!-- created with bpmn-js / http://bpmn.io -->
+				<center><img class="fill" src="img/bpmn/create_sip.svg"></center>
+			</div>
+			<div class="col-md-6 col-lg-12">
+			 <p class="mb-5" style="font-size: 1.5em;"> The SIP:s are created, based on the submission agreement and its associated profiles.</p>
+       <center>
+              <div class="text-center mt-4">
+                <a class="btn btn-primary btn-xl btn-outline-light mx-auto screencast" href="#create-sip-modal-1">
+                  <i class="fas fa-video mr-2"></i>
+                  DEMO!
+                </a>
+              </div>
+            </center>
+			 </div>
+
+
+        </div>
+  </section>
+
+  <!-- SIP Validation Section -->
+  <section class="portfolio" id="sip-validation">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">(S)IP Validation</h2>
+      <hr class="valid-icon mb-5">
+
+      <div class="row">
+	   <div class="col-md-12 col-lg-12">
+
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+
+              </div>
+            </div>
+          <!-- created with bpmn-js / http://bpmn.io -->
+				<center><img class="fill" src="img/bpmn/ip_validation.svg"></center>
+			</div>
+			<div class="col-md-6 col-lg-12">
+			 <p class="mb-5" style="font-size: 1.5em;">The SIP is validated before submitting to the receiving organzation (archive). It is checked for integrity, syntax and format according to what was decided in the Submission Agreement.</p>
+       <center>
+              <div class="text-center mt-4">
+                <a class="btn btn-primary btn-xl btn-outline-light mx-auto screencast" href="#validate-ip-modal-1">
+                  <i class="fas fa-video mr-2"></i>
+                  DEMO!
+                </a>
+              </div>
+            </center>
+			 </div>
+
+
+
+  </section>
+
+   <!-- Submit SIP Section -->
+  <section class="portfolio" id="submit-sip">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Submit SIP</h2>
+      <hr class="submit-sip-icon mb-5">
+
+      <div class="row">
+	   <div class="col-md-12 col-lg-12">
+
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+
+              </div>
+            </div>
+          <!-- created with bpmn-js / http://bpmn.io -->
+				<center><img class="fill" src="img/bpmn/submit_sip.svg"></center>
+			</div>
+      <div class="col-md-6 col-lg-12">
+        <center>
+       <p class="mb-5" style="font-size: 1.5em;">The SIP is prepared for submission and submitted to the receiving archive.</p>
+
+              <div class="text-center mt-4">
+                <a class="btn btn-primary btn-xl btn-outline-light mx-auto screencast" href="#submit-sip-modal-1">
+                  <i class="fas fa-video mr-2"></i>
+                  DEMO!
+                </a>
+              </div>
+            </center>
+       </div>
+
+
+
+
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+
+
+        <div class="col-md-4">
+          <h4 class="text-uppercase mb-4">About ESSArch</h4>
+          <p class="lead mb-0">ESSArch is a free to use, open source practical implementation of an OAIS<br>
+
+        </div>
+        <div class="col-md-4">
+          <center><a class="btn btn-social mx-1" href="http://etp.essarch.org/">
+          <i class="fab fa-fw fa-github fa-3x" style="color:white;"></i>
+        </a></center>
+
+
+        </div>
+        <div class="col-md-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Contact</h4>
+          <p class="lead mb-0">Björn Skog
+            <br>bjorn(at)essolutions.se<br>
+            <a href="http://essolutions.se">ES Solutions</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <div class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>&copy; ES Solutions 2019</small>
+
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Modals -->
+ <!-- Prepare-ip-modal-1 -->
+  <div class="portfolio-modal mfp-hide" id="prepare-ip-modal-1">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-12 ">
+            <h2 class="text-secondary text-uppercase mb-0">Prepare IP</h2>
+            <hr class="star-dark mb-5">
+
+          <center>  <video id='my-video' class='video-js' controls preload='auto' width='960' height='500'
+            poster='MY_VIDEO_POSTER.jpg' data-setup='{}'>
+              <source src="video/prepare_ip.mp4" type='video/mp4'>
+              <track src="video/prepare_ip.vtt" kind="captions" srclang="en" label="English" default>
+
+
+              <p class='vjs-no-js'>
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+              </p>
+            </video></center>
+
+
+<br>
+			<a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+
+              Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- create-sip-modal-1 -->
+   <div class="portfolio-modal mfp-hide" id="create-sip-modal-1">
+     <div class="portfolio-modal-dialog bg-white">
+       <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+         <i class="fa fa-3x fa-times"></i>
+       </a>
+       <div class="container text-center">
+         <div class="row">
+           <div class="col-lg-12 ">
+             <h2 class="text-secondary text-uppercase mb-0">Create SIP</h2>
+             <hr class="star-dark mb-5">
+
+           <center>  <video id='my-video' class='video-js' controls preload='auto' width='960' height='500'
+             poster='MY_VIDEO_POSTER.jpg' data-setup='{}'>
+               <source src="video/create_sip.mp4" type='video/mp4'>
+               <track src="video/create_sip.vtt" kind="captions" srclang="en" label="English" default>
+
+
+               <p class='vjs-no-js'>
+                 To view this video please enable JavaScript, and consider upgrading to a web browser that
+                 <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+               </p>
+             </video></center>
+
+
+ <br>
+       <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+
+               Close</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <!-- create-submit-sip-1 -->
+    <div class="portfolio-modal mfp-hide" id="submit-sip-modal-1">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-12 ">
+              <h2 class="text-secondary text-uppercase mb-0">Submit SIP</h2>
+              <hr class="star-dark mb-5">
+
+            <center>  <video id='my-video' class='video-js' controls preload='auto' width='960' height='500'
+              poster='MY_VIDEO_POSTER.jpg' data-setup='{}'>
+                <source src="video/submit_sip.mp4" type='video/mp4'>
+                <track src="video/submit_sip.vtt" kind="captions" srclang="en" label="English" default>
+
+
+                <p class='vjs-no-js'>
+                  To view this video please enable JavaScript, and consider upgrading to a web browser that
+                  <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+                </p>
+              </video></center>
+
+
+  <br>
+        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+
+                Close</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- validate-ip-1 -->
+     <div class="portfolio-modal mfp-hide" id="validate-ip-modal-1">
+       <div class="portfolio-modal-dialog bg-white">
+         <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+           <i class="fa fa-3x fa-times"></i>
+         </a>
+         <div class="container text-center">
+           <div class="row">
+             <div class="col-lg-12 ">
+               <h2 class="text-secondary text-uppercase mb-0">(S)IP Validation</h2>
+               <hr class="star-dark mb-5">
+
+             <center>  <video id='my-video' class='video-js' controls preload='auto' width='960' height='500'
+               poster='MY_VIDEO_POSTER.jpg' data-setup='{}'>
+                 <source src="video/validate_sip.mp4" type='video/mp4'>
+                 <track src="video/validate_sip.vtt" kind="captions" srclang="en" label="English" default>
+
+
+                 <p class='vjs-no-js'>
+                   To view this video please enable JavaScript, and consider upgrading to a web browser that
+                   <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+                 </p>
+               </video></center>
+
+
+   <br>
+         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+
+                 Close</a>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+    <!-- video-js -->
+    <script src='vendor/video-js/js/videojs.min.js'></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.js"></script>
+    	  <script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="Definitions_05y5abu" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="2.2.4">
+  <bpmn:process id="Process_0ottm5d" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_1p55ixn" name="">
+      <bpmn:documentation />
+      <bpmn:outgoing>SequenceFlow_04g3h9i</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:subProcess id="SubProcess_1tox4c3" name="Pre-Agreement&#10;Processing">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_04g3h9i</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1kdkcds</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataInput>
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+    </bpmn:subProcess>
+    <bpmn:subProcess id="SubProcess_0sh49nd" name="Data&#10;Extraction">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_1kdkcds</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_063l599</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataInput>
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+    </bpmn:subProcess>
+    <bpmn:subProcess id="SubProcess_1p1r6qk" name="Submit SIP ">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_1u6k667</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1ubts9a</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1dei6kh</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataInput>
+        <bpmn:dataOutput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataOutput>
+        <bpmn:dataOutput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataOutput>
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+    </bpmn:subProcess>
+    <bpmn:subProcess id="SubProcess_0fzqkgb" name="(S)IP Validation">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_1earcs9</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1u6k667</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_00o28fj</bpmn:outgoing>
+    </bpmn:subProcess>
+    <bpmn:subProcess id="SubProcess_0rh31xz" name="Prepare IP">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_063l599</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_00o28fj</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1g4z10f</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataInput>
+        <bpmn:dataInput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataInput>
+        <bpmn:dataInput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataInput>
+        <bpmn:dataInput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataInput>
+        <bpmn:dataInput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataInput>
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+    </bpmn:subProcess>
+    <bpmn:subProcess id="SubProcess_1f4p2bc" name="Create SIP">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_1g4z10f</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1earcs9</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+    </bpmn:subProcess>
+    <bpmn:endEvent id="EndEvent_14r1nqe" name="SIP removed">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_1dei6kh</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_155t9b4" />
+    </bpmn:endEvent>
+    <bpmn:endEvent id="EndEvent_0ayijv2" name="SIP submitted">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_1ubts9a</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0cb33d6" />
+    </bpmn:endEvent>
+    <bpmn:boundaryEvent id="BoundaryEvent_1rankai" attachedToRef="SubProcess_1p1r6qk">
+      <bpmn:messageEventDefinition id="MessageEventDefinition_08x527h" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="BoundaryEvent_0atbusu" attachedToRef="SubProcess_0fzqkgb">
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0m7yvys" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="BoundaryEvent_1f03yy9" attachedToRef="SubProcess_0rh31xz">
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1ee0dx4" />
+    </bpmn:boundaryEvent>
+    <bpmn:boundaryEvent id="BoundaryEvent_0j45amb" attachedToRef="SubProcess_1f4p2bc">
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0kjd5en" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_04g3h9i" sourceRef="StartEvent_1p55ixn" targetRef="SubProcess_1tox4c3">
+      <bpmn:documentation />
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_063l599" sourceRef="SubProcess_0sh49nd" targetRef="SubProcess_0rh31xz">
+      <bpmn:documentation />
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1ubts9a" sourceRef="SubProcess_1p1r6qk" targetRef="EndEvent_0ayijv2">
+      <bpmn:documentation />
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1g4z10f" sourceRef="SubProcess_0rh31xz" targetRef="SubProcess_1f4p2bc">
+      <bpmn:documentation />
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1kdkcds" sourceRef="SubProcess_1tox4c3" targetRef="SubProcess_0sh49nd">
+      <bpmn:documentation />
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1u6k667" sourceRef="SubProcess_0fzqkgb" targetRef="SubProcess_1p1r6qk">
+      <bpmn:documentation />
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1dei6kh" sourceRef="SubProcess_1p1r6qk" targetRef="EndEvent_14r1nqe" />
+    <bpmn:sequenceFlow id="SequenceFlow_00o28fj" sourceRef="SubProcess_0fzqkgb" targetRef="SubProcess_0rh31xz">
+      <bpmn:documentation />
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1earcs9" sourceRef="SubProcess_1f4p2bc" targetRef="SubProcess_0fzqkgb" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0ottm5d">
+      <bpmndi:BPMNShape id="StartEvent_1p55ixn_di" bpmnElement="StartEvent_1p55ixn">
+        <dc:Bounds x="252" y="318" width="30" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1tox4c3_di" bpmnElement="SubProcess_1tox4c3">
+        <dc:Bounds x="340" y="293" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_0sh49nd_di" bpmnElement="SubProcess_0sh49nd">
+        <dc:Bounds x="496" y="293" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1p1r6qk_di" bpmnElement="SubProcess_1p1r6qk">
+        <dc:Bounds x="1087" y="293" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_0fzqkgb_di" bpmnElement="SubProcess_0fzqkgb">
+        <dc:Bounds x="936" y="293" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_0rh31xz_di" bpmnElement="SubProcess_0rh31xz">
+        <dc:Bounds x="647" y="293" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1f4p2bc_di" bpmnElement="SubProcess_1f4p2bc">
+        <dc:Bounds x="787" y="293" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_14r1nqe_di" bpmnElement="EndEvent_14r1nqe">
+        <dc:Bounds x="1249" y="397" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1235" y="437" width="64" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0ayijv2_di" bpmnElement="EndEvent_0ayijv2">
+        <dc:Bounds x="1249" y="315" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1233" y="355" width="69" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_1rankai_di" bpmnElement="BoundaryEvent_1rankai">
+        <dc:Bounds x="1169" y="275" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_0atbusu_di" bpmnElement="BoundaryEvent_0atbusu">
+        <dc:Bounds x="1018" y="275" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_1f03yy9_di" bpmnElement="BoundaryEvent_1f03yy9">
+        <dc:Bounds x="729" y="275" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_0j45amb_di" bpmnElement="BoundaryEvent_0j45amb">
+        <dc:Bounds x="869" y="275" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_04g3h9i_di" bpmnElement="SequenceFlow_04g3h9i">
+        <di:waypoint x="282" y="333" />
+        <di:waypoint x="340" y="333" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_063l599_di" bpmnElement="SequenceFlow_063l599">
+        <di:waypoint x="596" y="333" />
+        <di:waypoint x="647" y="333" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1ubts9a_di" bpmnElement="SequenceFlow_1ubts9a">
+        <di:waypoint x="1187" y="333" />
+        <di:waypoint x="1249" y="333" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1g4z10f_di" bpmnElement="SequenceFlow_1g4z10f">
+        <di:waypoint x="747" y="333" />
+        <di:waypoint x="787" y="333" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1kdkcds_di" bpmnElement="SequenceFlow_1kdkcds">
+        <di:waypoint x="440" y="333" />
+        <di:waypoint x="496" y="333" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1u6k667_di" bpmnElement="SequenceFlow_1u6k667">
+        <di:waypoint x="1036" y="333" />
+        <di:waypoint x="1087" y="333" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1dei6kh_di" bpmnElement="SequenceFlow_1dei6kh">
+        <di:waypoint x="1137" y="373" />
+        <di:waypoint x="1137" y="415" />
+        <di:waypoint x="1249" y="415" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_00o28fj_di" bpmnElement="SequenceFlow_00o28fj">
+        <di:waypoint x="968" y="293" />
+        <di:waypoint x="968" y="265" />
+        <di:waypoint x="714" y="265" />
+        <di:waypoint x="714" y="293" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1earcs9_di" bpmnElement="SequenceFlow_1earcs9">
+        <di:waypoint x="887" y="333" />
+        <di:waypoint x="936" y="333" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

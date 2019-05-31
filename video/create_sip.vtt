@@ -1,0 +1,16 @@
+WEBVTT Kind: captions; Language: en
+
+00:00.500 --> 00:03.000
+<v ES>When upload is set completed the IP becomes visible in the Create SIP view.
+
+00:04.000 --> 00:08.000
+<v ES> The user can, by clicking the IP row inspect all included profiles
+
+00:10.000 --> 00:13.000
+<v ES> and with the right permissions the user can also edit them.
+
+00:14.000 --> 00:17.000
+<v ES> choose what validators to use in the SIP creation step by checking or unchecking the different validators.
+
+00:22.000 --> 00:24.000
+<v ES> click Create SIP to create.

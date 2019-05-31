@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_1vfhsqu" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="2.2.4">
+  <bpmn:process id="Process_1" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_0sckm93" name="SIP ready&#10; for submission">
+      <bpmn:documentation />
+      <bpmn:outgoing>SequenceFlow_089uukr</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EndEvent_0aog2al" name="SIP submitted">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_11iwrwk</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="UserTask_0fqku5g" name="Prepare SIP&#10;for submission">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_089uukr</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_04ijj4z</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="ServiceTask_1qxdn9q" name="Submit SIP">
+      <bpmn:documentation />
+      <bpmn:incoming>SequenceFlow_04ijj4z</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_11iwrwk</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataOutput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataOutput>
+        <bpmn:dataOutput>
+          <bpmn:documentation />
+          <bpmn:dataState />
+        </bpmn:dataOutput>
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:inputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_089uukr" sourceRef="StartEvent_0sckm93" targetRef="UserTask_0fqku5g">
+      <bpmn:documentation />
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_11iwrwk" sourceRef="ServiceTask_1qxdn9q" targetRef="EndEvent_0aog2al">
+      <bpmn:documentation />
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_04ijj4z" sourceRef="UserTask_0fqku5g" targetRef="ServiceTask_1qxdn9q">
+      <bpmn:documentation />
+    </bpmn:sequenceFlow>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
+      <bpmndi:BPMNShape id="StartEvent_0sckm93_di" bpmnElement="StartEvent_0sckm93" bioc:stroke="#000" bioc:fill="#fff">
+        <dc:Bounds x="365" y="460" width="30" height="30" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="345" y="496" width="70" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0aog2al_di" bpmnElement="EndEvent_0aog2al" bioc:stroke="#000" bioc:fill="#fff">
+        <dc:Bounds x="702" y="460" width="30" height="30" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="683" y="496" width="69" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0fqku5g_di" bpmnElement="UserTask_0fqku5g" bioc:stroke="#000" bioc:fill="#fff">
+        <dc:Bounds x="425" y="435" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1qxdn9q_di" bpmnElement="ServiceTask_1qxdn9q" bioc:stroke="#000" bioc:fill="#fff">
+        <dc:Bounds x="565" y="435" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_089uukr_di" bpmnElement="SequenceFlow_089uukr" bioc:stroke="#000" bioc:fill="#fff">
+        <di:waypoint x="395" y="475" />
+        <di:waypoint x="425" y="475" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_11iwrwk_di" bpmnElement="SequenceFlow_11iwrwk" bioc:stroke="#000" bioc:fill="#fff">
+        <di:waypoint x="665" y="475" />
+        <di:waypoint x="702" y="475" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_04ijj4z_di" bpmnElement="SequenceFlow_04ijj4z" bioc:stroke="#000" bioc:fill="#fff">
+        <di:waypoint x="525" y="475" />
+        <di:waypoint x="565" y="475" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
